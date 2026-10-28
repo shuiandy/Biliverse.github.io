@@ -1,0 +1,8 @@
+#!name=Biliverse 设置页 Duo 适配（测试）
+#!desc=把 Biliverse 设置页的 theme.css 换成 shuiandy fork 里的版本，宽屏分栏时避让右侧悬浮栏。测试完删掉即可。
+
+[Map Local]
+^https:\/\/app\.bilibili\.com\/settings\/theme\.css(?:\?[^#]*)?$ data-type=file data="https://raw.githubusercontent.com/shuiandy/Biliverse.github.io/fix/duo-right-clearance/settings/theme.css" status-code=200 header="Content-Type:text/css|Cache-Control:no-store"
+
+[MITM]
+hostname = %APPEND% app.bilibili.com
