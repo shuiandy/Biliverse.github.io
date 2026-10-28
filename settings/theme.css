@@ -49,3 +49,17 @@
 .pp-home-icon {
   background: var(--Pi0, #fff3f6);
 }
+
+/* 宽屏分栏（iPhone Duo 展开、iPad）时客户端在网页右侧叠加悬浮标签栏与状态胶囊，右侧需留出避让宽度。
+ * In wide split layouts (unfolded iPhone Duo, iPad) the client overlays a floating tab bar and status capsule on the right edge of the WebView, so keep a right clearance. */
+@media (min-width: 600px) {
+  .pp-home {
+    padding-right: max(88px, env(safe-area-inset-right));
+  }
+  .pp-fields,
+  .pp-choice-page,
+  .pp-settings-page,
+  .pp-cache-page {
+    padding-right: max(88px, calc((100% - 688px) / 2));
+  }
+}
